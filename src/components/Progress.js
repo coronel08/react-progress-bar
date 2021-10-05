@@ -1,35 +1,22 @@
-import React, { Component } from 'react'
 import styled from 'styled-components';
+import React, {useState, useEffect} from 'react'
 
+let ProgressBar = styled.div`
+position: fixed;
+background: linear-gradient(
+    to right, 
+    rgba(250, 224, 66, .8) ${props => props.scroll + '%'},
+    transparent 0);
+width: 100%;
+height:4px;
+z-index: 3;
+`
 
-export default class Progress extends Component {
-    state = {
-        scrollPosition: 0
-    }
+function Progress() {
 
-    listenToScrollEvent = () => {
-        document.addEventListener("scroll", () => {
-            requestAnimationFrame(() => {
-                // Calculate scroll distance
-                this.calculateScrollDistance()
-            })
-        })
-    }
+    const [scroll, setScroll] = useState(0)
 
-    calculateScrollDistance = () => {
-        const scrollTop = window.pageYOffset
-        const windowHeight = window.innerHeight
-        const docHeight = this.getDocHeight()
-
-        const totalDocScrollLength = docHeight - windowHeight;
-        const scrollPosition = Math.floor(scrollTop / totalDocScrollLength * 100);
-
-        this.setState({
-            scrollPosition,
-        })
-    }
-
-    getDocHeight = () => {
+    const getDocHeight = () => {
         return Math.max(
             document.body.scrollHeight, document.documentElement.scrollHeight,
             document.body.offsetHeight, document.documentElement.offsetHeight,
@@ -37,27 +24,34 @@ export default class Progress extends Component {
         )
     }
 
-    componentDidMount() {
-        this.listenToScrollEvent()
+    const listenToScrollEvent = () => {
+        document.addEventListener("scroll", () => {
+            requestAnimationFrame(() =>{
+                calculateScrollDistance()
+            })
+        })
     }
 
+    const calculateScrollDistance = () => {
+        const scrollTop = window.pageYOffset
+        const windowHeight = window.innerHeight
+        const docHeight = getDocHeight()
 
-    ProgressBar = styled.div`
-        position: fixed;
-        background: linear-gradient(
-            to right, 
-            rgba(250, 224, 66, .8) ${props => props.scroll},
-            transparent 0);
-        width: 100%;
-        height:4px;
-        z-index: 3;
-    `
+        const totalDocScrollLength = docHeight - windowHeight
+        const scrollPosition = Math.floor(scrollTop/ totalDocScrollLength * 100)
 
-    render() {
-        return (
-            <div>
-                <this.ProgressBar scroll={this.state.scrollPosition + '%'} />
-            </div>
-        )
+        setScroll(scrollPosition)
     }
+
+    useEffect(() => {
+        listenToScrollEvent()
+    }, )
+
+    return (
+        <div>
+            <ProgressBar scroll={scroll}/>
+        </div>
+    )
 }
+
+export default Progress

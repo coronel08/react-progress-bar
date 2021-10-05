@@ -6,11 +6,11 @@ Used THe following materials to help build this site.
 
 * [Responsive Navbar Using React JS](https://www.geeksforgeeks.org/create-a-responsive-navbar-using-reactjs/) and React-router-dom and styled components
 * [React Progress Scroll Bar](https://www.digitalocean.com/community/tutorials/react-progress-bar-on-scroll)
-
+* [React function based progress scroll](https://webomnizz.com/how-to-display-progress-bar-on-page-scroll-with-reactjs/)
 
 ## Todo:
-* Fix nav bar so it shows on mobile 
-* Convert Progress bar class based component to functional component, use this as a guide [Digital Ocean Convert react class to functional](https://www.digitalocean.com/community/tutorials/react-converting-to-a-hook)
+* []Fix nav bar so it shows on mobile 
+* [x] Convert Progress bar class based component to functional component, use this as a guide [Digital Ocean Convert react class to functional](https://www.digitalocean.com/community/tutorials/react-converting-to-a-hook)
 
 ## Available Scripts
 
