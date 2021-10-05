@@ -55,7 +55,9 @@ export default class Progress extends Component {
 
     render() {
         return (
-            <this.ProgressBar scroll={this.state.scrollPosition + '%'} />
+            <div>
+                <this.ProgressBar scroll={this.state.scrollPosition + '%'} />
+            </div>
         )
     }
 }
