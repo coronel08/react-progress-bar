@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Used THe following materials to help build this site.
+Used The following materials to help build this site.
 
 * [Responsive Navbar Using React JS](https://www.geeksforgeeks.org/create-a-responsive-navbar-using-reactjs/) and React-router-dom and styled components
 * [React Progress Scroll Bar](https://www.digitalocean.com/community/tutorials/react-progress-bar-on-scroll)
