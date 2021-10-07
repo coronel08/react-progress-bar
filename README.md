@@ -7,6 +7,9 @@ Used The following materials to help build this site.
 * [Responsive Navbar Using React JS](https://www.geeksforgeeks.org/create-a-responsive-navbar-using-reactjs/) and React-router-dom and styled components
 * [React Progress Scroll Bar](https://www.digitalocean.com/community/tutorials/react-progress-bar-on-scroll)
 * [React function based progress scroll](https://webomnizz.com/how-to-display-progress-bar-on-page-scroll-with-reactjs/)
+* [React footer devto](https://dev.to/joserfelix/create-a-mobile-friendly-navigation-with-react-4930)
+
+![](./public/progressBar.png)
 
 ## Todo:
 * []Fix nav bar so it shows on mobile 
