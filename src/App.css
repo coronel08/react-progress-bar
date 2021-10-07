@@ -17,8 +17,8 @@
   color: #61dafb;
 }
 
-
-.App p, .App h1{
+/* Style font inside about/ lorem ipsum */
+div main p, div main h1{
   margin: 30px auto;
   max-width: 800px;
   display:flex;

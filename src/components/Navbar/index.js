@@ -16,7 +16,7 @@ export default function Navbar() {
             <Nav>
                 <Bars onClick={() => setIsOpen(!isOpen)} />
                 <NavMenu isOpen={isOpen}>
-                    <NavLink to='/about'>About</NavLink>
+                    <NavLink to='/'>Home</NavLink>
                     <NavLink to='/blog'>Blog</NavLink>
                     <NavLink to="/signUp">Sign Up</NavLink>
                 </NavMenu>
