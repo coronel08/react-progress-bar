@@ -1,5 +1,5 @@
 import React from 'react'
-import styled,{createGlobalStyles} from 'styled-components'
+import styled from 'styled-components'
 
 
 function Footer() {
@@ -30,6 +30,9 @@ const BarStyles = {
     Logo: styled.h1`
         border: 2px solid gray;
         padding: 0.5rem 1rem;
+        @media only screen and (max-width: 600px){
+            display:none;
+        }
     `,
     Items: styled.ul`
         display:flex;
@@ -37,12 +40,13 @@ const BarStyles = {
     `,
 
     Item: styled.li`
-        padding: 0 1rem;
+        padding: 0 .5rem;
         cursor: pointer;
     `,
+
     Text: styled.p`
         color: purple;
         font-weight: 800;
-        margin: 0 2rem;
-    `
+        padding: 0 1rem;
+    `,
 }
