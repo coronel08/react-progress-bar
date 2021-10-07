@@ -19,7 +19,8 @@
 
 /* Style font inside about/ lorem ipsum */
 div main p, div main h1{
-  margin: 30px auto;
+  margin: 20px auto;
   max-width: 800px;
   display:flex;
+  padding: 0 1rem;
 }

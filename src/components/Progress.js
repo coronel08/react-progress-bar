@@ -1,16 +1,7 @@
 import styled from 'styled-components';
 import React, {useState, useEffect} from 'react'
+import ScrollToTop from './ScrollToTop'
 
-let ProgressBar = styled.div`
-position: fixed;
-background: linear-gradient(
-    to right, 
-    rgba(250, 224, 66, .8) ${props => props.scroll + '%'},
-    transparent 0);
-width: 100%;
-height:4px;
-z-index: 3;
-`
 
 function Progress() {
 
@@ -50,8 +41,21 @@ function Progress() {
     return (
         <div>
             <ProgressBar scroll={scroll}/>
+            <ScrollToTop />
         </div>
     )
 }
 
 export default Progress
+
+
+let ProgressBar = styled.div`
+position: fixed;
+background: linear-gradient(
+    to right, 
+    rgba(250, 224, 66, .8) ${props => props.scroll + '%'},
+    transparent 0);
+width: 100%;
+height:4px;
+z-index: 3;
+`

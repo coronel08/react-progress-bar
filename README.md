@@ -8,6 +8,7 @@ Used The following materials to help build this site.
 * [React Progress Scroll Bar](https://www.digitalocean.com/community/tutorials/react-progress-bar-on-scroll)
 * [React function based progress scroll](https://webomnizz.com/how-to-display-progress-bar-on-page-scroll-with-reactjs/)
 * [React footer devto](https://dev.to/joserfelix/create-a-mobile-friendly-navigation-with-react-4930)
+* [Scroll to top function](https://dev.to/silviaespanagil/how-to-create-a-scroll-to-top-button-with-react-17do)
 
 ![](./public/progressBar.png)
 
