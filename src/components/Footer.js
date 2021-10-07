@@ -30,7 +30,7 @@ const BarStyles = {
     Logo: styled.h1`
         border: 2px solid gray;
         padding: 0.5rem 1rem;
-        @media only screen and (max-width: 600px){
+        @media screen and (max-width: 600px){
             display:none;
         }
     `,
@@ -40,7 +40,7 @@ const BarStyles = {
     `,
 
     Item: styled.li`
-        padding: 0 .5rem;
+        padding: 0 1rem;
         cursor: pointer;
     `,
 
