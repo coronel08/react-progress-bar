@@ -16,7 +16,10 @@ export default function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path='/' exact component={Home} />
+          {/* Wrong way to pass prop into react router but easy to read 
+          https://learnwithparam.com/blog/how-to-pass-props-in-react-router/
+          */}
+          <Route exact path='/' component={() => <Home name='Prop' /> } />
           <Route path='/blog' component={Blog} />
           <Route path='/signUp' component={signUp} />
         </Switch>
