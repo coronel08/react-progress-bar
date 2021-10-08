@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const scaleNames = {
@@ -6,32 +6,23 @@ const scaleNames = {
     f: 'Fahrenheit'
 }
 
-export class TempInput extends Component {
-    constructor(props){
-        super(props)
-        this.handleChange = this.handleChange.bind(this);
+function TempInput({onTempChange,temperature, scale,}) {
+
+    const handleChange = (e) => {
+        onTempChange(e.target.value)
     }
 
-    handleChange(e){
-        this.props.onTempChange(e.target.value)
-    }
-
-    render() {
-        const temperature = this.props.temperature
-        const scale = this.props.scale
-
-        return (
-            <FieldsetDiv>
-                <fieldset >
-                    <legend>Enter temperature in {scaleNames[scale]}</legend>
-                    <input  
-                        value={temperature} 
-                        onChange={this.handleChange}
-                    />
-                </fieldset>
-            </FieldsetDiv>
-        )
-    }
+    return (
+        <FieldsetDiv>
+            <fieldset>
+                <legend>Enter Temp in {scaleNames[scale]}</legend>
+                <input 
+                    value={temperature}
+                    onChange={handleChange}
+                />
+            </fieldset>
+        </FieldsetDiv>
+    )
 }
 
 export default TempInput
