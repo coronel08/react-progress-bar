@@ -17,6 +17,8 @@ function ScrollToTop() {
         const position = window.pageYOffset;
         setScrollPosition(position)
 
+        // Could just pass styled component but ended up passing prop
+        // https://reactjs.org/docs/conditional-rendering.html
         if (scrollPosition > 30){
             return setShowTopButton('visible')
         } else {
