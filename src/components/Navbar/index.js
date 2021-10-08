@@ -19,6 +19,7 @@ export default function Navbar() {
                     <NavLink to='/'>Home</NavLink>
                     <NavLink to='/blog'>Blog</NavLink>
                     <NavLink to="/signUp">Sign Up</NavLink>
+                    <NavLink to="/calculator">Calc</NavLink>
                 </NavMenu>
                 <NavBtn>
                     <NavBtnLink to="/signin">Sign In</NavBtnLink>

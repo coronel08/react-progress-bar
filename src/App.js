@@ -7,6 +7,7 @@ import Home from './pages/home'
 import Blog from './pages/blog'
 import signUp from './pages/signUp'
 import Footer from './components/Footer'
+import Calculator from './pages/Calculator'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route exact path='/' component={() => <Home name='Prop' /> } />
           <Route path='/blog' component={Blog} />
           <Route path='/signUp' component={signUp} />
+          <Route path='/calculator' component={Calculator} />
         </Switch>
       </Router>
       <Footer />
